@@ -21,8 +21,8 @@ import java.util.List;
 
 public class IssueParse {
     private String mProjectKey;
-    Iterable<Priority> mPriorities;
-    Iterable<IssueType> mIssueTypes;
+    private final Iterable<Priority> mPriorities;
+    private final Iterable<IssueType> mIssueTypes;
 
     public IssueParse(Iterable<Priority> priorities, Iterable<IssueType> issueTypes) {
         mPriorities = priorities;
