@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.xml.sax.SAXException;
 import test.jira.entity.MyIssue;
-import test.jira.entity.MyJiraClient;
+import test.jira.MyJiraClient;
 import test.jira.utils.IssueParse;
 
 import javax.xml.parsers.ParserConfigurationException;

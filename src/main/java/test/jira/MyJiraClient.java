@@ -1,4 +1,4 @@
-package test.jira.entity;
+package test.jira;
 
 
 import com.atlassian.jira.rest.client.api.AuthenticationHandler;
@@ -27,9 +27,11 @@ public class MyJiraClient {
 
     public static synchronized MyJiraClient getInstance() {
         if (myJiraClient == null) {
-            myJiraClient = new MyJiraClient("${username}",
-                    "${token}",
-                    "${jiraURL}");
+            myJiraClient = new MyJiraClient(
+                    Constants.USER_NAME,
+                    Constants.TOKEN,
+                    Constants.JIRA_URL
+            );
         }
         return myJiraClient;
     }

@@ -2,7 +2,6 @@ package test.jira.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,7 +21,6 @@ public class TaskController {
 
     @PostMapping("/create/tasks")
     public ResponseEntity<?> createTask(@RequestParam("file") MultipartFile file) {
-        System.out.println("in method");
         try {
             return taskService.createIssues(file.getInputStream());
         } catch (IOException e) {
